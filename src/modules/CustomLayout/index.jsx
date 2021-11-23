@@ -1,10 +1,7 @@
 import React, { useEffect } from 'react'
-// import 'antd/dist/antd.css';
+import 'antd/dist/antd.min.css';
 import './styles.scss'
-import '../../theme/index.scss'
-
-// import PropTypes from 'prop-types'
-import { Layout } from 'antd'
+import { Layout,BackTop } from 'antd'
 import { SideBar } from '../SideBar';
 import { connect } from 'react-redux';
 import { Header } from '../Header';
@@ -15,33 +12,21 @@ export const CustomLayout = connect(mapStateToProps)(function CustomLayout({ chi
     const { Content } = Layout;
     useEffect(() => {
         if (theme === THEME_LIGHT) {
-          document.body.classList.remove('dark_theme');
-          document.body.classList.add('light_theme');
+            document.body.classList.remove('dark-theme');
+            document.body.classList.add('light-theme');
         } else {
-          document.body.classList.remove('light_theme');
-          document.body.classList.add('dark_theme');
+            document.body.classList.remove('light-theme');
+            document.body.classList.add('dark-theme');
         }
-      }, [theme])
+    }, [theme])
     return (
         <Layout className='customLayout light_theme'>
             <SideBar />
-            <Layout className="site-layout">
+            <Layout className="content-layout">
                 <Header />
-                <Content
-                    className="site-layout-background"
-                    style={{
-                        margin: '24px 16px',
-                        padding: 24,
-                        minHeight: 280,
-                    }}
-                >
-                    Content
-                </Content>
+                <Content className='customLayout__content'>{children}</Content>
+                <BackTop />
             </Layout>
         </Layout>
     )
 })
-
-// CustomLayout.propTypes = {
-
-// }

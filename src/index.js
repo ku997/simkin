@@ -21,12 +21,10 @@ store.subscribe(() => {
   localStorage.setItem("reduxState", JSON.stringify(store.getState()));
 });
 ReactDOM.render(
-  <React.StrictMode>
     <Provider _={lodash} store={store}>
       <App />
       <div id="modal"></div>
-    </Provider>
-  </React.StrictMode>,
+    </Provider>,
   document.getElementById("root")
 );
 reportWebVitals();

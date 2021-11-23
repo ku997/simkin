@@ -1,0 +1,28 @@
+.modalContent {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     padding: 10px;
+}
+.dark-theme .modalContent img,
+.dark-theme .image img{
+     filter: invert(1);
+}
+img {
+     max-width: 100%;
+}
+
+.image {
+     display: inline-block;
+     &--centered {
+          width: 100%;
+          img {
+               display: block;
+               margin: 0 auto;
+          }
+     }
+     &__annotation {
+          text-align: center;
+          padding-top: 20px;
+     }
+}
