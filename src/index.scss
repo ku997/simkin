@@ -14,4 +14,11 @@
 body,
 .ant-table {
   font-size: 16px !important;
+  p {
+    margin-bottom: .3em;
+  }
+  .ant-back-top {
+    right: 40px;
+    bottom: 100px;
+  }
 }

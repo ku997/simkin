@@ -26,11 +26,15 @@ export function Image({ src, isModal = true, isCentered = true, annotation, ...p
     }, 100);
 
     useEffect(() => {
+        onScroll()
+    })
+
+    useEffect(() => {
         document.addEventListener('scroll', onScroll, true);
         if (isActive) document.removeEventListener('scroll', onScroll, true);
         return () => document.removeEventListener('scroll', onScroll, true);
     }, [isActive]);
-    
+
     const onWheel = (e) => {
         const delta = Math.sign(e.deltaY);
         setIsZoomedIn(delta > 0)
@@ -43,30 +47,30 @@ export function Image({ src, isModal = true, isCentered = true, annotation, ...p
     }
     return (
         <div className={`wrapper ${isActive ? 'wrapper--active' : ''}`} ref={currentElement}>
-                {<div className={`image ${isCentered ? 'image--centered' : ''}`} onClick={onToggleModal}>
-                    <img style={{
-                        cursor: isModal ? 'pointer' : 'default'
-                    }}
-                        onLoad={onImgLoad}
-                        draggable={false}
-                        src={src}
-                        alt={annotation && ''}
-                    />
-                    {annotation && <p className='image__annotation'>{annotation}</p>}
-                </div>}
-                {src && isModal && <Modal
-                    footer={null}
-                    closable={true}
-                    centered={true}
-                    visible={isVisible}
-                    onCancel={onToggleModal}
-                    width='auto'
-                >
-                    <div className={`modalContent ${isZoomedIn ? 'modalContent--zoomedIn' : ''}`} onWheelCapture={(e) => onWheel(e)}>
-                        <img width={imgWidth} draggable={false} src={src} alt={annotation && ''} />
-                    </div>
-                </Modal>}
-            </div>
+            {<div className={`image ${isCentered ? 'image--centered' : ''}`} onClick={onToggleModal}>
+                <img style={{
+                    cursor: isModal ? 'pointer' : 'default'
+                }}
+                    onLoad={onImgLoad}
+                    draggable={false}
+                    src={src}
+                    alt={annotation && ''}
+                />
+                {annotation && <p className='image__annotation'>{annotation}</p>}
+            </div>}
+            {src && isModal && <Modal
+                footer={null}
+                closable={true}
+                centered={true}
+                visible={isVisible}
+                onCancel={onToggleModal}
+                width='auto'
+            >
+                <div className={`modalContent ${isZoomedIn ? 'modalContent--zoomedIn' : ''}`} onWheelCapture={(e) => onWheel(e)}>
+                    <img width={imgWidth} draggable={false} src={src} alt={annotation && ''} />
+                </div>
+            </Modal>}
+        </div>
     )
 }
 

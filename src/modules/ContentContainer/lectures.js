@@ -1,4 +1,3 @@
-import { LECTURE_CONTENT } from "../../constants";
 import { Lecture1 } from "../../content/lectures/Lecture1";
 import { Lecture10 } from "../../content/lectures/Lecture10";
 import { Lecture11 } from "../../content/lectures/Lecture11";
@@ -12,23 +11,69 @@ import { Lecture7 } from "../../content/lectures/Lecture7";
 import { Lecture8 } from "../../content/lectures/Lecture8";
 import { Lecture9 } from "../../content/lectures/Lecture9";
 
-export const content = {
-  [LECTURE_CONTENT]: {
-    1: <Lecture1 />,
-    1.1: <Lecture1 />,
-    1.2: <Lecture2 />,
-    1.3: <Lecture3 />,
-    2: <Lecture4 />,
-    2.1: <Lecture4 />,
-    2.2: <Lecture5 />,
-    2.3: <Lecture6 />,
-    3: <Lecture7 />,
-    3.1: <Lecture7 />,
-    3.2: <Lecture8 />,
-    3.3: <Lecture9 />,
-    3.4: <Lecture10 />,
-    4: <Lecture11 />,
-    4.1: <Lecture11 />,
-    4.2: <Lecture12 />,
+export const content = [
+  {
+    id: 1,
+    component: <Lecture1 />,
   },
-};
+  {
+    id: 1.1,
+    component: <Lecture1 />,
+  },
+  {
+    id: 1.2,
+    component: <Lecture2 />,
+  },
+  {
+    id: 1.3,
+    component: <Lecture3 />,
+  },
+  {
+    id: 2,
+    component: <Lecture4 />,
+  },
+  {
+    id: 2.1,
+    component: <Lecture4 />,
+  },
+  {
+    id: 2.2,
+    component: <Lecture5 />,
+  },
+  {
+    id: 2.3,
+    component: <Lecture6 />,
+  },
+  {
+    id: 3,
+    component: <Lecture7 />,
+  },
+  {
+    id: 3.1,
+    component: <Lecture7 />,
+  },
+  {
+    id: 3.2,
+    component: <Lecture8 />,
+  },
+  {
+    id: 3.3,
+    component: <Lecture9 />,
+  },
+  {
+    id: 3.4,
+    component: <Lecture10 />,
+  },
+  {
+    id: 4,
+    component: <Lecture11 />,
+  },
+  {
+    id: 4.1,
+    component: <Lecture11 />,
+  },
+  {
+    id: 4.2,
+    component: <Lecture12 />,
+  },
+];

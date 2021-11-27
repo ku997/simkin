@@ -33,7 +33,7 @@ export const SideBar = connect(mapStateToProps, mapDispathToProps)(function Side
     return (
         <Sider className={`sideBar ${isCollapsed && 'sideBar--collapsed'}`} trigger={null} width={350} collapsible collapsed={isCollapsed}>
             <div className={`logo ${isCollapsed && 'logo--collapsed'} ant-layout-header`}>
-                {<Html5Outlined />}{!isCollapsed && 'simaga_1.0'}
+                {<Html5Outlined />}{!isCollapsed && 'scrum'}
             </div>
             <Menu className="sideBar__menu" defaultOpenKeys={openKeys} openKeys={openKeys} selectedKeys={[activeItem || '1']} forceSubMenuRender={true} mode="inline" defaultSelectedKeys={['submenu0_0']}>
                 {menu.map(({ item, submenu, icon, route }, index) => {
@@ -53,7 +53,6 @@ export const SideBar = connect(mapStateToProps, mapDispathToProps)(function Side
                                         key={"/" + route + chapter}
                                         style={{ whiteSpace: 'normal', height: 'auto', lineHeight: 'normal' }}
                                         onClick={() => {
-                                            // dispatch(setActiveItem(route + chapter))
                                             navigate("/" + route + chapter)
                                         }}
                                     >
