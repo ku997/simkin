@@ -1,28 +1,51 @@
+.wrapper {
+  opacity: 0;
+  transform: translateY(-40px);
+  &--active {
+    animation: onShow .3s .1s ease forwards;
+  }
+}
+@keyframes onShow {
+  from {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+  to {
+     opacity: 1;
+     transform: translateY(0px);
+  }
+}
 .modalContent {
-     display: flex;
-     align-items: center;
-     justify-content: center;
-     padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  cursor: zoom-in;
+  &--zoomedIn {
+    cursor: zoom-out;
+  }
 }
 .dark-theme .modalContent img,
-.dark-theme .image img{
-     filter: invert(1);
+.dark-theme .image img {
+  filter: invert(1);
 }
 img {
-     max-width: 100%;
+  max-width: 100%;
+  transition: 0.3s ease;
+  user-select: none;
 }
 
 .image {
-     display: inline-block;
-     &--centered {
-          width: 100%;
-          img {
-               display: block;
-               margin: 0 auto;
-          }
-     }
-     &__annotation {
-          text-align: center;
-          padding-top: 20px;
-     }
+  display: inline-block;
+  &--centered {
+    width: 100%;
+    img {
+      display: block;
+      margin: 0 auto;
+    }
+  }
+  &__annotation {
+    text-align: center;
+    padding-top: 20px;
+  }
 }
