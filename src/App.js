@@ -8,7 +8,7 @@ export const App = () => {
   return (
     <Router>
       <Routes>
-        <Route exact path="/" element={<Navigate to="/chapter/1" />} />
+        <Route exact path="/" element={<Navigate to="/chapter/0" />} />
         <Route exact path="/chapter/:id" element={<ContentContainer contentType={LECTURE_CONTENT} />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>

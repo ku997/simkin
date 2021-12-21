@@ -14,14 +14,14 @@ export function ContentContainer({ contentType, ...props }) {
     useEffect(() => {
         setCurrentIndex(content.findIndex(el => +el.id === +id))
     }, [id])
-    const component = content.find(el => +el.id === +id).component;
+    const component = content.find(el => +el.id === +id);
 
     return (
         <CustomLayout>
             {
                 component ?
                     <>
-                        {component}
+                        {component.component}
                         <div className="buttons">
                             <Button disabled={!currentIndex} onClick={() => {
                                 navigate(`/chapter/${content[currentIndex - 1].id}`)

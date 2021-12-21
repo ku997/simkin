@@ -47,7 +47,7 @@ export const SideBar = connect(mapStateToProps, mapDispathToProps)(function Side
                                 dispatch(setSidebarState(!isCollapsed))
                             }}
                         >
-                            {submenu.map(({ item, chapter }, ind) => {
+                            {submenu.map(({ item, chapter, className }, ind) => {
                                 return (
                                     <Item
                                         key={"/" + route + chapter}
@@ -55,6 +55,7 @@ export const SideBar = connect(mapStateToProps, mapDispathToProps)(function Side
                                         onClick={() => {
                                             navigate("/" + route + chapter)
                                         }}
+                                        className={className}
                                     >
                                         <div>{item}</div>
                                     </Item>

@@ -1,3 +1,4 @@
+import { Introduction } from "../../content/lectures/Introduction";
 import { Lecture1 } from "../../content/lectures/Lecture1";
 import { Lecture10 } from "../../content/lectures/Lecture10";
 import { Lecture11 } from "../../content/lectures/Lecture11";
@@ -12,6 +13,10 @@ import { Lecture8 } from "../../content/lectures/Lecture8";
 import { Lecture9 } from "../../content/lectures/Lecture9";
 
 export const content = [
+  {
+    id: 0,
+    component: <Introduction />,
+  },
   {
     id: 1,
     component: <Lecture1 />,
