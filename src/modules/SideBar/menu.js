@@ -86,6 +86,11 @@ export const menu = [
         chapter: '4.2',
         className: 'subItem'
       },
+      {
+        item: '4.3. Основы унифицированного языка моделирования UML',
+        chapter: '4.3',
+        className: 'subItem'
+      },
     ],
   }
 ];

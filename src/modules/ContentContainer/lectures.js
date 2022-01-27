@@ -3,6 +3,7 @@ import { Lecture1 } from "../../content/lectures/Lecture1";
 import { Lecture10 } from "../../content/lectures/Lecture10";
 import { Lecture11 } from "../../content/lectures/Lecture11";
 import { Lecture12 } from "../../content/lectures/Lecture12";
+import { Lecture13 } from "../../content/lectures/Lecture13";
 import { Lecture2 } from "../../content/lectures/Lecture2";
 import { Lecture3 } from "../../content/lectures/Lecture3";
 import { Lecture4 } from "../../content/lectures/Lecture4";
@@ -80,5 +81,9 @@ export const content = [
   {
     id: 4.2,
     component: <Lecture12 />,
+  },
+  {
+    id: 4.3,
+    component: <Lecture13 />,
   },
 ];

@@ -8,7 +8,7 @@ import { Header } from '../Header';
 import { THEME_LIGHT } from '../../constants';
 const mapStateToProps = ({ theme }) => ({ theme })
 
-export const CustomLayout = connect(mapStateToProps)(function CustomLayout({ children, dispatch, isCollapsed, theme, ...props }) {
+export const CustomLayout = connect(mapStateToProps)(function CustomLayout({ children, dispatch, isCollapsed, theme, isShowSideBar=true, ...props }) {
     const { Content } = Layout;
     useEffect(() => {
         if (theme === THEME_LIGHT) {
@@ -21,7 +21,7 @@ export const CustomLayout = connect(mapStateToProps)(function CustomLayout({ chi
     }, [theme])
     return (
         <Layout className='customLayout light_theme'>
-            <SideBar />
+           {isShowSideBar && <SideBar />}
             <Layout className="content-layout">
                 <Header />
                 <Content className='customLayout__content'>{children}</Content>
