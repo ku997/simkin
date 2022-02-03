@@ -4,21 +4,26 @@ import "./styles.scss";
 import { Button } from "antd";
 import { useNavigate } from "react-router-dom";
 import { CustomLayout } from "../CustomLayout";
+import { Image } from "../../modules/Image";
 
 export function MainPage(props) {
   const navigate = useNavigate();
   return (
     <CustomLayout isShowSideBar={false}>
       <div className="mainPage">
-        <p
-          className="mainPage__text"
-          style={{
-            fontWeight: "bold",
-          }}
-        >
-          Введение
+        <p className="mainPage__text">
+          ПРОЕКТИРОВАНИЕ ИНФОРМАЦИОННЫХ СИСТЕМ ПРЕДПРИЯТИЙ
         </p>
-        <Button onClick={() => navigate("/chapter/0")}>Запустить</Button>
+        {
+          <Image
+            src="assets/img/lab11/15.jpg"
+            annotation="Рис. 15 Фрагмент концептуальной схемы информационной модели"
+          />
+        }
+
+        <center>
+          <Button onClick={() => navigate("/chapter/0")} type="primary" value="large">Запустить</Button>
+        </center>
       </div>
     </CustomLayout>
   );

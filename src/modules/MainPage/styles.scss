@@ -1,9 +1,17 @@
 .mainPage {
     &__text{
         color: aqua;
+        font-size: 40px;
+        text-align: center;
     }
 
     &__content {
         background-color: #fff;
     }
+
+    &__divBtn {
+        align-self: center;
+        background-color: black;
+    }
+    
 }

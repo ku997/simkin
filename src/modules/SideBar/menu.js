@@ -138,7 +138,7 @@ export const menu = [
         className: 'subItem'
       },
       {
-        item: 'ЭПИЛОГ',
+        item: 'ЗАКЛЮЧЕНИЕ',
         chapter: '3.9',
       },
     ],
