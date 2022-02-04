@@ -5,7 +5,9 @@ import {
     Layout,
     Switch
 } from 'antd'
+import { MenuUnfoldOutlined, MenuFoldOutlined } from '@ant-design/icons';
 import { connect } from 'react-redux';
+import { setSidebarState } from '../../actions/sidebar';
 import { setTheme } from '../../actions/theme';
 import { THEME_DARK, THEME_LIGHT } from '../../constants';
 
@@ -19,7 +21,11 @@ const mapDispathToProps = dispatch => ({ dispatch });
 
 export const Header = connect(mapStateToProps, mapDispathToProps)(function Header({ dispatch, theme, isCollapsed, ...props }) {
     return (
-        <Layout.Header className={`header ${isCollapsed && 'header--collapsed'}`}>  
+        <Layout.Header className={`header ${isCollapsed && 'header--collapsed'}`}>
+            {React.createElement(isCollapsed ? MenuUnfoldOutlined : MenuFoldOutlined, {
+                className: 'trigger',
+                onClick: () => dispatch(setSidebarState(!isCollapsed)),
+            })}
             <Switch
                 checked={theme === THEME_DARK}
                 onChange={(checked) => { dispatch(setTheme(checked ? THEME_DARK : THEME_LIGHT)) }}

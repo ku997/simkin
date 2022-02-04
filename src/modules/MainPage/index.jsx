@@ -22,7 +22,7 @@ export function MainPage(props) {
         }
 
         <center>
-          <Button onClick={() => navigate("/chapter/0")} type="primary" value="large">Запустить</Button>
+          <Button onClick={() => navigate("/lecture/0")} type="primary" value="large">Запустить</Button>
         </center>
       </div>
     </CustomLayout>

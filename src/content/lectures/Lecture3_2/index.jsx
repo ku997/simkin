@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Image } from '../../../modules/Image';
 
-function Lecture3_2(props) {
+export function Lecture3_2(props) {
   return (
     <div className="lecture3_2">
       <h2>1.3.2. Итерационная модель жизненного цикла информационной системы</h2>
@@ -35,6 +35,4 @@ function Lecture3_2(props) {
   );
 }
 
-Lecture3_2.propTypes = {};
 
-export default Lecture3_2;

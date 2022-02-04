@@ -1,0 +1,20 @@
+.nodeGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  .ant-checkbox-wrapper {
+    margin-left: 0 !important;
+  }
+  .ant-radio-wrapper,
+  .ant-checkbox-wrapper {
+    transition: 0.3s ease;
+  }
+  &.hasError {
+    .ant-radio-wrapper,
+    .ant-checkbox-wrapper {
+      color: red !important;
+    }
+  }
+}
+
+
