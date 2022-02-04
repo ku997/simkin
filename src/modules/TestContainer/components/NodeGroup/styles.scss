@@ -1,6 +1,6 @@
 .nodeGroup {
-  display: flex;
-  flex-direction: column;
+  display: flex !important;
+  flex-direction: column !important;
   gap: 10px;
   .ant-checkbox-wrapper {
     margin-left: 0 !important;
