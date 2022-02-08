@@ -16,13 +16,13 @@ export function MainPage(props) {
         </p>
         {
           <Image
-            src="assets/img/lab11/15.jpg"
-            annotation="Рис. 15 Фрагмент концептуальной схемы информационной модели"
+            src="assets/img/main/TSTU.jpg"
+            annotation=""
           />
         }
 
         <center>
-          <Button onClick={() => navigate("/lecture/0")} type="primary" value="large">Запустить</Button>
+          <Button onClick={() => navigate("/lecture/0")} type="primary" value="large" className="mainPage__divBtn">Запустить</Button>
         </center>
       </div>
     </CustomLayout>

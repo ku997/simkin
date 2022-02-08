@@ -25,6 +25,8 @@ import { Lecture7_4 } from "../../content/lectures/Lecture7_4";
 import { Epilogue } from "../../content/lectures/Epilogue";
 import { LABWORKS_CONTENT, LECTURE_CONTENT } from "../../constants";
 import { Test1 } from "../../content/tests/Test1";
+import { Video } from "../../content/lectures/Video";
+import { Test2 } from "../../content/tests/Test2";
 
 export const content = {
   [LECTURE_CONTENT]: {
@@ -56,9 +58,11 @@ export const content = {
     '4.3': <Lecture7_3 />,
     '4.3.1': <Lecture7_4 />,
     '4.3.2': <Lecture12 />,
+    '5': <Video />,
     'end': <Epilogue />,
   },
   [LABWORKS_CONTENT]: {
     '1': <Test1 />,
+    '2': <Test2 />,
   }
 }

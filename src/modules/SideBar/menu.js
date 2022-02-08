@@ -139,19 +139,27 @@ export const menu = [
         className: 'subItem'
       },
       {
+        item: '5. ВИДЕОМАТЕРИАЛЫ',
+        chapter: '5',
+      },
+      {
         item: 'ЗАКЛЮЧЕНИЕ',
         chapter: 'end',
       },
     ],
   },
   {
-    item: "Тестировнаие",
+    item: "Тестирование",
     icon: <ExperimentOutlined />,
     route: `${LABWORKS_CONTENT}/`,
     submenu: [
       {
-        item: "Tест 1",
+        item: "Tест к главе 1 и главе 2",
         chapter: '1',
+      },
+      {
+        item: "Tест к главе 3 и главе 4",
+        chapter: '2',
       },
     ]
   }

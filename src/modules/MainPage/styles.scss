@@ -1,17 +1,21 @@
 .mainPage {
-    &__text{
-        color: aqua;
-        font-size: 40px;
-        text-align: center;
-    }
+  &__text {
+    color: rgb(10, 81, 161);
+    font-size: 40px;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 50px;
+  }
 
-    &__content {
-        background-color: #fff;
-    }
+  &__content {
+    background-color: #fff;
+  }
 
-    &__divBtn {
-        align-self: center;
-        background-color: black;
-    }
-    
+  &__divBtn {
+    margin-top: 100px;
+    align-self: center;
+    background-color: rgb(10, 81, 161);
+    border-color: rgb(10, 81, 161);
+    height: 40px;
+  }
 }
