@@ -16,10 +16,12 @@
       top: 64px;
     }
     .logo {
-      position: sticky;
-    }
-    .logo {
       justify-content: center;
+      position: sticky;
+      padding: 0 10px !important;
+      img {
+        height: auto;
+      }
     }
   }
 }
@@ -35,6 +37,9 @@
   gap: 10px;
   padding: 0 24px !important;
   top: 0px;
+  img {
+    height: 95%;
+  }
 }
 .subItem {
   padding-left: 58px !important;

@@ -28,7 +28,7 @@ export const SideBar = connect(mapStateToProps, mapDispathToProps)(function Side
     return (
         <Sider className={`sideBar ${isCollapsed && 'sideBar--collapsed'}`} trigger={null} width={350} collapsible collapsed={isCollapsed}>
             <div className={`logo ${isCollapsed && 'logo--collapsed'} ant-layout-header`}>
-                {<Html5Outlined />}{!isCollapsed && 'информсистемы'}
+                <img src="tsu.png" alt="" />
             </div>
             <Menu className="sideBar__menu" selectedKeys={[activeItem || '1']} forceSubMenuRender={true} mode="inline" defaultSelectedKeys={['submenu0_0']}>
                 {menu.map(({ item, submenu, icon, route }, index) => {
