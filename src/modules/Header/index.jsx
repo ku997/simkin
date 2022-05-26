@@ -26,6 +26,10 @@ export const Header = connect(mapStateToProps, mapDispathToProps)(function Heade
                 className: 'trigger',
                 onClick: () => dispatch(setSidebarState(!isCollapsed)),
             })}
+            <div className='header__text'>
+                <p>Электронное учебное издание</p>
+                <p>"Проектирование информационных систем предприятий"</p>
+            </div>
             <Switch
                 checked={theme === THEME_DARK}
                 onChange={(checked) => { dispatch(setTheme(checked ? THEME_DARK : THEME_LIGHT)) }}

@@ -11,9 +11,10 @@ export function MainPage(props) {
   return (
     <CustomLayout isShowSideBar={false}>
       <div className="mainPage">
-        <p className="mainPage__text">
-          ПРОЕКТИРОВАНИЕ ИНФОРМАЦИОННЫХ СИСТЕМ ПРЕДПРИЯТИЙ
+        <p className="mainPage__title">
+          "ПРОЕКТИРОВАНИЕ ИНФОРМАЦИОННЫХ СИСТЕМ ПРЕДПРИЯТИЙ"
         </p>
+        <p className="mainPage__text">Электронное учебное издание</p>
         {
           <Image
             src="assets/img/main/TSTU.jpg"
@@ -22,7 +23,7 @@ export function MainPage(props) {
         }
 
         <center>
-          <Button onClick={() => navigate("/lecture/0")} type="primary" value="large" className="mainPage__divBtn">Запустить</Button>
+          <Button onClick={() => navigate("/lecture/0")} type="primary" value="large" className="mainPage__divBtn">К оглавлению</Button>
         </center>
       </div>
     </CustomLayout>

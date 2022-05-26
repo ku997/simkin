@@ -1,19 +1,19 @@
 import React from "react";
 import {
   HashRouter as Router,
-  Navigate,
   Route,
   Routes,
 } from "react-router-dom";
 import { LABWORKS_CONTENT, LECTURE_CONTENT } from "./constants";
 import { ContentContainer } from "./modules/ContentContainer";
+import { MainPage } from "./modules/MainPage";
 import NotFoundPage from "./modules/NotFoundPage";
 
 export const App = () => {
   return (
     <Router>
       <Routes>
-      <Route exact path="/" element={<Navigate to="/lecture/0" />} />
+      <Route exact path="/" element={<MainPage />} />
         <Route
           exact
           path={`/${LECTURE_CONTENT}/:id`}

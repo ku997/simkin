@@ -8,6 +8,16 @@
   &--collapsed {
     position: sticky;
   }
+  &__text {
+    color: #fff;
+    text-align: right;
+    margin-left: auto;
+    margin-right: 25px;
+    p {
+      line-height: normal;
+      margin-bottom: 5px;
+    }
+  }
 }
 .trigger {
   font-size: 18px;

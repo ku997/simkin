@@ -1,13 +1,11 @@
 import React from "react";
-import PropTypes from "prop-types";
 import { TestContainer } from "../../../modules/TestContainer";
 import {
-  CHECKBOX_TYPE,
   INPUT_TYPE,
   RADIO_TYPE,
 } from "../../../modules/TestContainer/constants";
 
-export function Test2(color, ...props) {
+export function Test2() {
   const data = [
     {
       type: RADIO_TYPE,

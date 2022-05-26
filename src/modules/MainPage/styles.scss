@@ -1,10 +1,17 @@
 .mainPage {
-  &__text {
+  &__title {
     color: rgb(10, 81, 161);
     font-size: 40px;
     text-align: center;
     font-weight: bold;
     margin-bottom: 50px;
+  }
+  &__text {
+    display: block;
+    font-size: 40px;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 80px;
   }
 
   &__content {

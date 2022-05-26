@@ -139,10 +139,6 @@ export const menu = [
         className: 'subItem'
       },
       {
-        item: '5. ВИДЕОМАТЕРИАЛЫ',
-        chapter: '5',
-      },
-      {
         item: 'ЗАКЛЮЧЕНИЕ',
         chapter: 'end',
       },
